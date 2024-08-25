@@ -3,6 +3,7 @@ import { Inter, Calistoga } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { cn } from "@/lib/utils";
+import grainImage from "@/assets/images/grain.jpg";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const calistoga = Calistoga({
@@ -36,7 +37,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className='relative min-h-screen'>
+            <div
+              className='absolute inset-0 -z-10 opacity-5'
+              style={{
+                backgroundImage: `url(${grainImage.src})`,
+              }}
+            />
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>
