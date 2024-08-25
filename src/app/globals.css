@@ -72,4 +72,8 @@
   .nav-item {
     @apply px-4 py-1.5 text-card-foreground/70 rounded-full text-sm font-semibold hover:bg-card-foreground/10 hover:text-foreground transition duration-300;
   }
+
+  .container {
+    @apply lg:max-w-5xl;
+  }
 }
